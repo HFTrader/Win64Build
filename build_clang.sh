@@ -64,6 +64,6 @@ $COMSPEC <<ENDCMD
 set TEMP=
 set TMP=
 call "%VS140COMNTOOLS%\..\..\VC\bin\amd64\vcvars64.bat"
-REM devenv LLVM.sln /Build Release /project ALL_BUILD 
+devenv LLVM.sln /Build Release /project ALL_BUILD 
 devenv LLVM.sln /Build Release /project INSTALL
 ENDCMD
