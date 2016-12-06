@@ -19,11 +19,10 @@ else
     #GCC_VER="4.1-20080630"
     echo "Usage: $0 <version>"
     echo "Current versions:"
-    wget -qO- $MIRROR_URL/gcc/snapshots | sed -n 's/.*href=\"\(.*\)\/\".*/\1/p' 
+    wget -qO- $MIRROR_URL/gcc/snapshots | sed -n 's/.*href=\"\(.*\)\/\".*/\1/p' | tr '\n' ' '
     exit 1
 fi
 
-mpc mingw-w64-x86_64-toolchain 
 
 # create build directory
 mkdir -p $BUILD_DIR
